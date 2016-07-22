@@ -1,0 +1,197 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{array}
+
+\usepackage{geometry}
+\usepackage{array,etaremune,microtype,pifont}
+\usepackage{ragged2e,titlesec,xcolor}
+
+\usepackage{hyperref}
+
+\hypersetup
+{
+  hidelinks = true,
+  pdfauthor = Romain Picot,
+  pdftitle  = CV
+}
+
+\geometry
+{
+  a4paper,
+  nohead,
+  nofoot,
+  hmargin = 1.5cm,
+  vmargin = 2  cm,
+}
+
+\titleformat{\section}{\Large\bfseries\sffamily}{}{0em}
+{%
+  \begingroup
+  \color{gray!30}%
+  \titleline{\leaders\hrule height 0.6em\hfill\kern 0 pt\relax}%
+  \endgroup
+  \nobreak
+  \vspace{-1.2em}%
+  \nobreak
+}
+
+\titleformat{\subsection}{\large\itshape}{}{0em}{}
+
+\renewcommand*\arraystretch{1.4}
+\pagestyle{empty}
+\frenchspacing
+
+\newcommand*{\paper}[2]
+{\item \href{http://dx.doi.org#1}{\ignorespaces#2\unskip.}}
+\newcommand*{\papertitle}[1]
+{%
+  \begingroup
+  \emph{#1}%
+  \endgroup
+}
+
+\newlength{\sidewidth}
+\newlength{\sidewidthT}
+\newlength{\mainwidth}
+\newlength{\mainwidthT}
+\AtBeginDocument
+{%
+  \settowidth{\sidewidth}{\textbf{Professional bodiesAAAAA}\hspace{0.75em}}%
+  \setlength{\mainwidth}{\dimexpr\linewidth - \sidewidth\relax}%
+  \settowidth{\sidewidthT}{\textbf{Associatif}\hspace{1.em}}%
+  \setlength{\mainwidthT}{0.5\dimexpr\linewidth - \sidewidthT\relax}%
+}
+
+\newcommand*{\headline}[1]
+{%
+\hbox{%
+  \llap{\ding{72}\hspace*{0.2em}}%
+  \textbf{#1}%
+  }%
+}
+
+\newenvironment{CVtable}
+{%
+  \begin{tabular}
+    {@{}>{\bfseries}p{\sidewidth}@{}>{\ding{229} \RaggedRight}p{\mainwidth}@{}}%
+}
+{\end{tabular}}
+
+\newenvironment{CVtable3}
+{%
+  \begin{tabular}
+    {@{}>{\bfseries}p{\sidewidthT}@{}>{\ding{229} }p{\mainwidthT}@{}>{\RaggedRight}p{\mainwidthT}@{}}%
+}
+{\end{tabular}}
+
+\begin{document}
+
+
+\begin{raggedright}
+\Huge Doctorant \\
+\LARGE 2\textsuperscript{ème} année
+\end{raggedright}
+
+\vspace{-2cm}
+\begin{raggedleft}
+  \textbf{Romain Picot}\\
+  15 Rue René Anjolvy \\
+  94250 Gentilly \\
+  Tel: 06 71 86 39 81 \\
+  \href{mailto:romain.picot2@gmail.com}{\texttt{romain.picot2@gmail.com}}\\
+\end{raggedleft}
+
+\section{Expérience professionnelle}
+
+\begin{CVtable}
+  Avr 2015 -- Mars 2018 & \textbf{Doctorant -- EDF R\&D, département
+    SINETICS et LIP6,}\par\textbf{équipe PEQUAN}\par
+  Vérification numérique des codes de calculs industriels\\
+  Déc 2014 -- Fév 2015 &  \textbf{Ingénieur d'étude -- LIP6, équipe PEQUAN}\par Validation numérique des algorithmes compensés grâce à l'arithmétique\par stochastique \\
+  Mars 2014 -- Sept 2014 &  \textbf{Stagiaire -- EDF R\&D, département SINETICS}\par Création d'une d'un outil de post-traitement à la librairie CADNA et\par utilisation sur le code Telemac~2D\\
+  Juin 2013 -- Août 2013 &  \textbf{Stagiaire -- Armines}\par Conception et réalisation d'un disjoncteur intelligent pour plates-formes expérimentales \\
+  Juin 2012 -- Sept 2012 & \textbf{Stagiaire WCM -- Saint-Gobain
+    Belgium division Gyproc}\par
+  Ingénierie des procédés\\
+\end{CVtable}
+
+\section{Formation}
+
+\begin{CVtable}
+2011 -- 2014 &  \textbf{Diplôme d'ingénieur -- Polytech Paris-UPMC}\par
+               Électronique et informatique des systèmes embarqués \\
+2009 -- 2011 &  \textbf{Classe préparatoire Mathématique et Physique -- Lycée Jacques Amyot}\par MPSI-MP, Melun\\
+2006 -- 2009 &  \textbf{Baccalauréat Scientifique-- Lycée Joliot Curie}\par Option physique-chimie, Dammarie-les-lys
+\end{CVtable}
+ 
+\section{Langages}
+\begin{CVtable}
+Anglais & \textbf{TOEIC: 965/990 en 2013} \\
+\end{CVtable}
+
+\section{Informatique}
+\begin{CVtable}
+Système d'exploitation & Windows, Linux, Unix \\
+Langage & C/C++, html/css, LaTeX, Fortran, Python \\
+Autre & Inkscape, matlab, Emacs, MS Office, LibreOffice
+\end{CVtable}
+
+
+\section{Divers}
+\begin{CVtable3}
+Associatif & \textbf{AIPPU} \par Association des Ingénieurs Polytech Paris-UPMC & Membre du CA (2015 - .. ) \par
+                      Vice-président (2016 - .. )\\ 
+Sport & \textbf{Course} & \\
+      & \textbf{Escrime médiévale} & \\
+Other & \textbf{Lecture} & \\
+      & \textbf{Jeux de plateaux} & \\
+\end{CVtable3}
+
+\section{Publications}
+        \begin{itemize}
+               \item[] {\bf Conférence internationale (avec comité de lecture):}
+                 
+               \begin{itemize}
+               \item[$\bullet$] \emph{Numerical validation of
+                   compensated summation algorithms with stochastic
+                   arithmetic.}, S. Graillat, F. Jézéquel, et
+                 R. Picot.  8th International Workshop on Numerical
+                 Software Verification, NSV 2015, Avril
+                 2015. Electronic Notes in Theoretical Computer
+                 Science, volume 317, pages 55-69.
+               \end{itemize}
+                 
+               \item[] {\bf Conférence internationale (avec résumé seul):}
+                 
+               \begin{itemize}
+               \item[$\bullet$] \emph{PROMISE: floating-point
+                   precision tuning with stochastic arithmetic},
+                 S. Graillat, F. Jézéquel, R. Picot, F. Févotte et
+                 B. Lathuilière. 17th International Symposium on
+                 Scientific Computing, Computer Arithmetics and
+                 Verified Numerics, SCAN 2016, Septembre 2016
+               \end{itemize}
+                 
+               \item[] {\bf Rapport de recherche:}
+                 
+               \begin{itemize}
+               \item[$\bullet$] \emph{Auto-tuning for floating-point
+                   precision with Discrete Stochastic Arithmetic},
+                 S. Graillat, F. Jézéquel, R. Picot, F. Févotte et
+                 B. Lathuilière. Référence: hal-01331917
+               \end{itemize}
+                 
+               \item[] {\bf Présentations:}
+                 
+               \begin{itemize}
+                 \item[$\bullet$] \emph{Arithmétique stochastique et Algorithmes compensés}, Séminaire des Doctorants du LIP6, Février 2016
+                 \item[$\bullet$] \emph{Algorithmes compensés et Arithmétique stochastique}, Journée des thèses SINETICS, Avril 2016
+               \end{itemize}
+                                    
+       \end{itemize}
+
+
+\end{document}
